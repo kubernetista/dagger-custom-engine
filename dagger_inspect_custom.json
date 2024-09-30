@@ -1,0 +1,197 @@
+[
+    {
+        "Id": "638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a",
+        "Created": "2024-09-30T08:27:01.454270163Z",
+        "Path": "dagger-entrypoint.sh",
+        "Args": [
+            "--debug"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 7744,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-09-30T08:27:01.560227346Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:c66807151e832086ac2b0189a1153cebbfad318a507dfbf3a507e23b1e1a301c",
+        "ResolvConfPath": "/var/lib/docker/containers/638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a/hostname",
+        "HostsPath": "/var/lib/docker/containers/638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a/hosts",
+        "LogPath": "/var/lib/docker/containers/638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a/638bb75d16158f02a27e6ebd86560eb1179a7025e0752d8dfa7b2f6b73cbb63a-json.log",
+        "Name": "/dagger-engine-custom",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "dagger-engine:/var/lib/dagger"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "host",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                48,
+                126
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": null,
+            "ReadonlyPaths": null
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "dagger-engine",
+                "Source": "/var/lib/docker/volumes/dagger-engine/_data",
+                "Destination": "/var/lib/dagger",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "docker-desktop",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
+                "DAGGER_GO_SDK_MANIFEST_DIGEST=sha256:4421bf2cfd1def7fba1fb677c54e35dab63cf59f70df32bd04eb1738b1c90c17",
+                "DAGGER_PYTHON_SDK_MANIFEST_DIGEST=sha256:c5c56696d7df8abb56f8de0998dc70026c75a2943fc06f8a41091ebc68f387ef",
+                "DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=sha256:7a02b582988ce4c66940e234198e8409b89827b3115bc504e8056b1577b00d83",
+                "_EXPERIMENTAL_DAGGER_RUNNER_HOST=unix:///var/run/buildkit/buildkitd.sock",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "--debug"
+            ],
+            "Image": "registry.dagger.io/engine:v0.13.3",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "dagger-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "72c70d3eec77763d924c486933822b747b7750bfa0f06f4ce5a58d0950cdde98",
+            "SandboxKey": "/var/run/docker/netns/default",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "",
+                    "DriverOpts": null,
+                    "NetworkID": "96d38367f92ac2088830bb5743d769df90c176f510c342abb01a84779cef3b10",
+                    "EndpointID": "e2a879de636fa6497882a1b2edbf29f29c4c19b2f3968518ccb92d9eb253ce51",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]

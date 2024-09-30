@@ -1,0 +1,195 @@
+{
+	"Id": "ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381",
+	"Created": "2024-09-27T22:21:17.868115432Z",
+	"Path": "dagger-entrypoint.sh",
+	"Args": [
+		"--debug"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 736,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2024-09-27T22:21:18.538060636Z",
+		"FinishedAt": "0001-01-01T00:00:00Z"
+	},
+	"Image": "sha256:c66807151e832086ac2b0189a1153cebbfad318a507dfbf3a507e23b1e1a301c",
+	"ResolvConfPath": "/var/lib/docker/containers/ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381/hostname",
+	"HostsPath": "/var/lib/docker/containers/ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381/hosts",
+	"LogPath": "/var/lib/docker/containers/ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381/ea2408afa8ed9c8d1dc26c7112b4a8d4038a6657d25ee67cb7d278b65f46e381-json.log",
+	"Name": "/dagger-engine-v0.13.3",
+	"RestartCount": 0,
+	"Driver": "overlayfs",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "",
+	"ExecIDs": null,
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "bridge",
+		"PortBindings": {},
+		"RestartPolicy": {
+			"Name": "always",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"ConsoleSize": [
+			0,
+			0
+		],
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "private",
+		"Dns": [],
+		"DnsOptions": [],
+		"DnsSearch": [],
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": true,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": [
+			"label=disable"
+		],
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": [],
+		"BlkioDeviceReadBps": [],
+		"BlkioDeviceWriteBps": [],
+		"BlkioDeviceReadIOps": [],
+		"BlkioDeviceWriteIOps": [],
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": [],
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": null,
+		"PidsLimit": null,
+		"Ulimits": [],
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"MaskedPaths": null,
+		"ReadonlyPaths": null
+	},
+	"GraphDriver": {
+		"Data": null,
+		"Name": "overlayfs"
+	},
+	"Mounts": [
+		{
+			"Type": "volume",
+			"Name": "124af10e4361f7a7e3b8a0c24342aedce87f07928266010acc87e1b01cd0a39a",
+			"Source": "/var/lib/docker/volumes/124af10e4361f7a7e3b8a0c24342aedce87f07928266010acc87e1b01cd0a39a/_data",
+			"Destination": "/var/lib/dagger",
+			"Driver": "local",
+			"Mode": "",
+			"RW": true,
+			"Propagation": ""
+		}
+	],
+	"Config": {
+		"Hostname": "ea2408afa8ed",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
+			"DAGGER_GO_SDK_MANIFEST_DIGEST=sha256:4421bf2cfd1def7fba1fb677c54e35dab63cf59f70df32bd04eb1738b1c90c17",
+			"DAGGER_PYTHON_SDK_MANIFEST_DIGEST=sha256:c5c56696d7df8abb56f8de0998dc70026c75a2943fc06f8a41091ebc68f387ef",
+			"DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=sha256:7a02b582988ce4c66940e234198e8409b89827b3115bc504e8056b1577b00d83",
+			"_EXPERIMENTAL_DAGGER_RUNNER_HOST=unix:///var/run/buildkit/buildkitd.sock"
+		],
+		"Cmd": [
+			"--debug"
+		],
+		"Image": "registry.dagger.io/engine:v0.13.3",
+		"Volumes": {
+			"/var/lib/dagger": {}
+		},
+		"WorkingDir": "",
+		"Entrypoint": [
+			"dagger-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {}
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "3da4e01002fe17c10c162e07c682edb45128e421c89023b258b49614c6d3ced2",
+		"SandboxKey": "/var/run/docker/netns/3da4e01002fe",
+		"Ports": {},
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "0671c5f29124c03dc6bde8191425c06377882c7b437bdf75c7de609885f0aee0",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "02:42:ac:11:00:02",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"MacAddress": "02:42:ac:11:00:02",
+				"DriverOpts": null,
+				"NetworkID": "28ecf1a53fbf6ffeb97368c026212abd275ed4c452d262e611a9347564a5f143",
+				"EndpointID": "0671c5f29124c03dc6bde8191425c06377882c7b437bdf75c7de609885f0aee0",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"DNSNames": null
+			}
+		}
+	}
+}
