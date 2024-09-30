@@ -1,4 +1,4 @@
-# Dagger: publish to a k3d local registry
+# Dagger: publish to a (k3d) local registry
 
 ## Modify the dagger engine runner, connecting it to the host network (instead of the bridge)
 
@@ -55,4 +55,14 @@ http :5000/v2/_catalog
 docker stop ${DAGGER_ENGINE_CUSTOM}
 docker rm ${DAGGER_ENGINE_CUSTOM}
 
+```
+
+## Test publish  using skopeo
+
+```sh
+# Push an image to Gitea
+skopeo copy --override-os=linux --dest-tls-verify=false --dest-username="$DAGGER_REGISTRY_USERNAME" --dest-password="$DAGGER_REGISTRY_PASSWORD" docker://quay.io/buildah/stable docker://git.localhost:8443/aruba-demo/my-nginx:latest
+
+# Try to pull the image
+docker pull git.localhost:8443/aruba-demo/my-nginx:latest
 ```
