@@ -61,8 +61,28 @@ docker rm ${DAGGER_ENGINE_CUSTOM}
 
 ```sh
 # Push an image to Gitea
-skopeo copy --override-os=linux --dest-tls-verify=false --dest-username="$DAGGER_REGISTRY_USERNAME" --dest-password="$DAGGER_REGISTRY_PASSWORD" docker://quay.io/buildah/stable docker://git.localhost:8443/aruba-demo/my-nginx:latest
+skopeo copy --override-os=linux --dest-tls-verify=false --dest-username="$DAGGER_REGISTRY_USERNAME" --dest-password="$DAGGER_REGISTRY_PASSWORD" docker://docker.io/library/alpine:latest docker://git.localhost:8443/aruba-demo/my-nginx-1:latest
+# skopeo copy --override-os=linux --dest-tls-verify=false --dest-username="$DAGGER_REGISTRY_USERNAME" --dest-password="$DAGGER_REGISTRY_PASSWORD" docker://quay.io/buildah/stable docker://git.localhost:8443/aruba-demo/my-buildah:latest
 
 # Try to pull the image
-docker pull git.localhost:8443/aruba-demo/my-nginx:latest
+docker pull git.localhost:8443/aruba-demo/my-nginx-1:latest
+# docker pull git.localhost:8443/aruba-demo/my-buildah:latest
+
+# Check in the browser
+open https://git.localhost:8443/aruba-demo/-/packages
+
+# Logout
+docker logout git.localhost:8443
+
+# Try to push
+docker tag git.localhost:8443/aruba-demo/my-nginx-1:latest git.localhost:8443/aruba-demo/my-nginx-1:v1
+docker push git.localhost:8443/aruba-demo/my-nginx-1:v1
+
+# Docker login
+echo ${DAGGER_REGISTRY_PASSWORD} | docker login git.localhost:8443 --username ${DAGGER_REGISTRY_USERNAME} --password-stdin
+
+# Try to push
+export DOCKER_TLS_VERIFY=0
+docker push git.localhost:8443/aruba-demo/my-nginx-1:v1
+
 ```
