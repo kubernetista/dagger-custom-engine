@@ -1,4 +1,8 @@
 name: dagger
+
+include:
+  - ../../_nuvola/traefik-mkcert-docker/compose.yaml
+
 services:
 
   dagger_engine:
