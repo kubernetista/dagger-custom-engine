@@ -1,5 +1,16 @@
 # Dagger: publish to a (k3d) local registry
 
+## Reference
+
+- Custom CA
+  - <https://docs.dagger.io/manuals/administrator/custom-ca/>
+
+## Run with Docker Compose
+
+```sh
+docker compose --profile full up
+```
+
 ## Modify the dagger engine runner, connecting it to the host network (instead of the bridge)
 
 ```sh
