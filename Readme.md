@@ -1,4 +1,33 @@
-# Dagger: publish to a (k3d) local registry
+# Dagger Custom Engine
+
+_Original name: Dagger: publish to a (k3d) local registry_
+
+Follow the steps to start a custom dagger engine, that includes the local mkcert CA
+
+At every new dagger release the engine version and the hashes of the sdks need to be updated.
+
+UPDATE THE ENV VARS BELOW IN DIRENV (.envrc)
+
+```sh
+vim .envrc
+##:
+# Dagger
+export DAGGER_VERSION="v0.14.0"
+
+# The three vars below change at every dagger version (being hashes of the images)
+export "DAGGER_GO_SDK_MANIFEST_DIGEST=sha256:0bbceb0c4f1c346d3408087273bce50bd6ffaa39d76d783b4c177421a984c5f0"
+export "DAGGER_PYTHON_SDK_MANIFEST_DIGEST=sha256:c64096425c63f26e2e301643eb3a25f4e533881a8b49d87c2a596a2405c923eb"
+export "DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=sha256:c0aa2496d90869c1c73451bd70780c572a29a849a7e96fbd334d840e405572ba"
+```
+
+## Start the dagger engine
+
+```sh
+just start-dagger
+
+# or (⚠️ the compose dagger stops and does not restart after every job)
+just start-compose-dagger
+```
 
 ## Reference
 
