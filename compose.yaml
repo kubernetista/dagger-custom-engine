@@ -21,14 +21,20 @@ services:
       - ./certs/rootCA.pem:/usr/local/share/ca-certificates/rootCA.pem
     environment:
       # - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-      - _EXPERIMENTAL_DAGGER_RUNNER_HOST=unix:///var/run/buildkit/buildkitd.sock
+      # - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      # - _EXPERIMENTAL_DAGGER_RUNNER_HOST=unix:///var/run/buildkit/buildkitd.sock
+      ####     Load from direnv (.envrc)
+      - PATH=${DAGGER_PATH}
+      - _EXPERIMENTAL_DAGGER_RUNNER_HOST=${DAGGER_EXPERIMENTAL_DAGGER_RUNNER_HOST}
       # ⚠️ The following environment variables are used to specify the SDKs to be used by the engine ⚠️
       # ⚠️ Update the values below to the latest SDK versions every time you update the Dagger engine version ⚠️
-      - DAGGER_GO_SDK_MANIFEST_DIGEST=sha256:392b15870818b172e8af5ab372632aa43de4192a1baba26d2fc8dc3f03e3a60a
-      - DAGGER_PYTHON_SDK_MANIFEST_DIGEST=sha256:dab793f796ad1734fb92209d826563c51a36258652acdb8f3647ea33cf8a83e7
-      - DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=sha256:6e4bf41e2a2388012bf63e859eec2f0e4f0a30a14337d139e092213ce39deeb2
-
+      # - DAGGER_GO_SDK_MANIFEST_DIGEST=sha256:0bbceb0c4f1c346d3408087273bce50bd6ffaa39d76d783b4c177421a984c5f0
+      # - DAGGER_PYTHON_SDK_MANIFEST_DIGEST=sha256:c64096425c63f26e2e301643eb3a25f4e533881a8b49d87c2a596a2405c923eb
+      # - DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=sha256:c0aa2496d90869c1c73451bd70780c572a29a849a7e96fbd334d840e405572ba
+      ####     Load from direnv (.envrc)
+      - DAGGER_GO_SDK_MANIFEST_DIGEST=${DAGGER_GO_SDK_MANIFEST_DIGEST}
+      - DAGGER_PYTHON_SDK_MANIFEST_DIGEST=${DAGGER_PYTHON_SDK_MANIFEST_DIGEST}
+      - DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST=${DAGGER_TYPESCRIPT_SDK_MANIFEST_DIGEST}
     command: dagger-entrypoint.sh --debug
 
 volumes:
